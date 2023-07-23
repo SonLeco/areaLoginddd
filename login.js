@@ -15,7 +15,7 @@ class Login {
   static login = (callback_ok, callback_not, config = null) => {
     if (config != null) this.config = config;
     this.callback_ok = () => {
-      callback_ok(this.nomelogado);
+      callback_ok();
     };
     this.callback_not = () => {
       callback_not();
@@ -126,7 +126,7 @@ class Login {
           sessionStorage.setItem("matlogado", mat);
           sessionStorage.setItem("nomelogado", res.nome);
           sessionStorage.setItem("acessologado", res.acesso);
-          this.callback_ok(this.nomelogado);
+          this.callback_ok();
           this.fechar();
         } else {
           sessionStorage.setItem("logado", "false");
