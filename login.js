@@ -126,7 +126,7 @@ class Login {
           sessionStorage.setItem("matlogado", mat);
           sessionStorage.setItem("nomelogado", res.nome);
           sessionStorage.setItem("acessologado", res.acesso);
-          this.callback_ok();
+          this.callback_ok(res.nome);
           this.fechar();
         } else {
           sessionStorage.setItem("logado", "false");
